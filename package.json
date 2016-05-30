@@ -1,0 +1,15 @@
+{
+  "name": "introducing-globalize",
+  "version": "1.0.0",
+  "description": "A repository including several demos that showcase the features of Globalize",
+  "main": "index.js",
+  "keywords": [
+    "globalize"
+  ],
+  "author": "Aurelio De Rosa <a.derosa@audero.it> (https://www.audero.it)",
+  "license": "MIT",
+  "dependencies": {
+    "cldr-data": "^29.0.1",
+    "globalize": "^1.1.1"
+  }
+}
