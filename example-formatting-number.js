@@ -1,11 +1,14 @@
-// Include the Globalize library
+// Include the Globalize libray
 var Globalize = require('globalize');
 
+// Include the CLDR data
+var cldrData = require('cldr-data');
+
 // Loads the supplemental data
-Globalize.load(require('cldr-data').entireSupplemental() );
+Globalize.load(cldrData.entireSupplemental());
 
 // Loads the data of the specified locales
-Globalize.load(require('cldr-data').entireMainFor('it', 'en', 'en-GB'));
+Globalize.load(cldrData.entireMainFor('it', 'en', 'en-GB'));
 
 var number = 1302.93;
 

@@ -1,21 +1,26 @@
 // Include the Globalize libray
 var Globalize = require('globalize');
 
+// Include the CLDR data
+var cldrData = require('cldr-data');
+
 // Loads the supplemental data
-Globalize.load(require('cldr-data').entireSupplemental() );
+Globalize.load(cldrData.entireSupplemental());
 
 // Loads the data of the specified locales
-Globalize.load(require('cldr-data').entireMainFor('en'));
+Globalize.load(cldrData.entireMainFor('en'));
+
+var enGlobalize = Globalize('en');
 
 var value = 229.431;
 
-var formatter = Globalize('en').currencyFormatter('USD');
+var usdFormatter = enGlobalize.currencyFormatter('USD');
 // "$229.43"
-console.log(formatter(value));
+console.log(usdFormatter(value));
 
-formatter = Globalize('en').currencyFormatter('EUR', {
+var eurFormatter = enGlobalize.currencyFormatter('EUR', {
    style: 'code',
    round: 'ceil'
 });
 // "229.44 EUR"
-console.log(formatter(value));
+console.log(eurFormatter(value));
