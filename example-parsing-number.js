@@ -1,4 +1,4 @@
-// Include the Globalize libray
+// Include the Globalize library
 var Globalize = require('globalize');
 
 // Include the CLDR data
